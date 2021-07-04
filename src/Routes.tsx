@@ -3,6 +3,6 @@ import MainPage from "./containers/MainPage";
 
 export default (
   <Switch>
-    <Route path="/mainpage" component={MainPage} />
+    <Route path="/" component={MainPage} />
   </Switch>
 );

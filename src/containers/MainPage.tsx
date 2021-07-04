@@ -26,10 +26,10 @@ function MainPage() {
         >
           Search
         </Button>
-        <button onClick={() => console.log(currentStockSymbol)}>
+        {/* <button onClick={() => console.log(currentStockSymbol)}>
           log cur stock symbol
         </button>
-        <button onClick={() => console.log(symbol)}>log symbol</button>
+        <button onClick={() => console.log(symbol)}>log symbol</button> */}
       </div>
       {symbol !== "" && <SpreadSheet symbol={symbol} />}
     </div>

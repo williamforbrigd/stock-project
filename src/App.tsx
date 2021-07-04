@@ -4,11 +4,15 @@ import "./App.css";
 import SpreadSheet from "./components/SpreadSheet";
 import Routes from "./Routes";
 import { BrowserRouter } from "react-router-dom";
+import { TopBar } from "./components/TopBarComponents/TopBar";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">{Routes}</div>
+      <div className="App">
+        <TopBar />
+        {Routes}
+      </div>
     </BrowserRouter>
   );
 }
