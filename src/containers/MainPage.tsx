@@ -1,4 +1,4 @@
-import { Button, Card, TextField } from "@material-ui/core";
+import { Button, TextField } from "@material-ui/core";
 import React, { ChangeEvent, useState } from "react";
 import SpreadSheet from "../components/SpreadSheet";
 import "./MainPage.css";
@@ -11,8 +11,8 @@ function MainPage() {
     setCurrentStockSymbol((event.target as HTMLInputElement).value);
   };
   return (
-    <div className="header">
-      <div>
+    <div className="background">
+      {/* <div>
         <TextField
           onChange={onChangeStockSymbol}
           style={{ margin: "5rem .5rem 5rem 5rem" }}
@@ -28,7 +28,7 @@ function MainPage() {
           Search
         </Button>
       </div>
-      {symbol !== "" && <SpreadSheet symbol={symbol} />}
+      {symbol !== "" && <SpreadSheet symbol={symbol} />} */}
     </div>
   );
 }

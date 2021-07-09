@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent, useState } from "react";
 import { useHistory } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -13,9 +13,11 @@ import {
 } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
-import { Button } from "@material-ui/core";
+import { Button, TextField } from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/Home";
 import { DefinitionsAccordion } from "./DefinitionsAccordion";
+import SpreadSheet from "./SpreadSheet";
+import "./NavBar.css";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -80,6 +82,13 @@ export const NavBar: React.FC = () => {
   const classes = useStyles();
   const history = useHistory();
 
+  const [currentStockSymbol, setCurrentStockSymbol] = useState<string>("");
+  const [symbol, setSymbol] = useState<string>("");
+
+  const onChangeStockSymbol = (event: ChangeEvent<HTMLInputElement>) => {
+    setCurrentStockSymbol((event.target as HTMLInputElement).value);
+  };
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -112,17 +121,43 @@ export const NavBar: React.FC = () => {
             Definisjoner
           </Button>
           <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
+            <div className="navbar__search">
+              {/* <TextField
+                onChange={onChangeStockSymbol}
+                //style={{ margin: "5rem .5rem 5rem 5rem" }}
+                label="Stock symbol"
+                variant="outlined"
+                className="navbar__searchInput"
+              /> */}
+              <input
+                type="text"
+                className="navbar__searchInput"
+                onChange={onChangeStockSymbol}
+              />
+              <Button
+                //style={{ height: "3.5rem", marginTop: "5rem" }}
+                variant="contained"
+                color="primary"
+                onClick={() => {
+                  setSymbol(currentStockSymbol);
+                }}
+                className="navbar__searchButton"
+              >
+                Search
+              </Button>
             </div>
-            <InputBase
+            {symbol !== "" && <SpreadSheet symbol={symbol} />}
+            {/* <div className={classes.searchIcon}>
+              <SearchIcon />
+            </div> */}
+            {/* <InputBase
               placeholder="Search…"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
               inputProps={{ "aria-label": "search" }}
-            />
+            /> */}
           </div>
         </Toolbar>
       </AppBar>

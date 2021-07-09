@@ -1,0 +1,17 @@
+.navbar__search {
+  display: flex;
+  flex: 1;
+}
+
+.navbar__searchInput {
+  height: 30px !important;
+  padding: 10px !important;
+  border: none !important;
+  width: 100% !important;
+  margin-right: 10px;
+}
+
+.navbar__searchButton {
+  height: 30px !important;
+  padding: 5px !important;
+}
