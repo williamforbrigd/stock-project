@@ -82,7 +82,14 @@ export const TopBar: React.FC = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "lightgrey" }}>
+    <div
+      style={{
+        backgroundColor: "lightgrey",
+        position: "fixed",
+        width: "100%",
+        top: "0",
+      }}
+    >
       {sp500 === "" || sp500Current === 0 ? (
         <div style={{ display: "flex" }}>
           <Typography>Fetching data...</Typography>

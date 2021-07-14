@@ -5,7 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function Definitions() {
   return (
-    <Card>
+    <Card
+      style={{
+        marginTop: "100px",
+        scrollMarginTop: "100px",
+      }}
+    >
       <Card.Header>Definisjoner</Card.Header>
       <Card.Body>
         <Card.Subtitle style={{ textAlign: "left", marginBottom: "5px" }}>
@@ -124,11 +129,12 @@ function Definitions() {
           kontantstrøm fra finans
           <br />
           p/cf forteller deg forholdet mellom markedsverdien og kontantstrømmen
-          fra driften til et selskap. Jo mindre dette forholdet er, jo bedre
-          antas investeringen som å være. forholdet bør sammenlignes med
-          selskaper innenfor samme sektor, fordi sektorer har forskjellige
-          gjennomsnittlige verdier på hva som kan indikere en underpriset /
-          overpriset aksje.
+          fra driften til et selskap.
+          <br />
+          Jo mindre dette forholdet er, jo bedre antas investeringen som å være.
+          forholdet bør sammenlignes med selskaper innenfor samme sektor, fordi
+          sektorer har forskjellige gjennomsnittlige verdier på hva som kan
+          indikere en underpriset / overpriset aksje.
         </Card.Text>
         <Divider style={{ marginBottom: "15px" }} />
         <Card.Subtitle style={{ textAlign: "left", marginBottom: "5px" }}>
@@ -253,7 +259,7 @@ function Definitions() {
           ev / ebit (enterprise value / earnings before interest and taxes)
         </Card.Subtitle>
         <Card.Text style={{ textAlign: "left" }}>
-          Utregning:
+          utregning:
           <br />
           enterprise value / ebit
           <br />
@@ -262,6 +268,15 @@ function Definitions() {
           <br />
           ebit (driftsresultat) = årsresultat + renter + skatter
           <br />
+          Den ligner på ev / ebitda men ev / ebit tar hensyn til nedskrivninger
+          og avskrivninger. Dette gjør betydelig forskjell for kapitalintensive
+          selskaper der avskrivninger er en stor økonomisk kostnad.
+          <br />
+          Et lavt ev / ebit forhold kan indikere “en billig” aksje.
+          <br />
+          forholdet bør sammenlignes med selskaper innenfor samme sektor, fordi
+          sektorer har forskjellige gjennomsnittlige verdier på hva som kan
+          indikere en underpriset / overpriset aksje.
         </Card.Text>
         <Divider style={{ marginBottom: "15px" }} />
         <Card.Subtitle style={{ textAlign: "left", marginBottom: "5px" }}>
@@ -269,7 +284,7 @@ function Definitions() {
           depreciation and amortization)
         </Card.Subtitle>
         <Card.Text style={{ textAlign: "left" }}>
-          Utregning:
+          utregning:
           <br />
           enterprise value / ebitda
           <br />
@@ -278,6 +293,22 @@ function Definitions() {
           <br />
           ebitda = årsresultat + renter + skatter + nedskrivninger +
           avskrivninger
+          <br />
+          Den ligner på ev / ebit men ev / ebitda utelukker ikke nedskrivninger
+          og avskrivninger.
+          <br />
+          En lav ev / ebitda multippel betyr ofte at aksjen er underpriset, mens
+          en høy ev / ebitda i forhold til sine markeds konkurrenter kan
+          indikere at selskapet er overpriset.
+          <br />
+          Man bør være oppmerksom på hvis man investerer i selskaper der ev /
+          ebitda multippelen synker. Det kan være fundamentale underliggende
+          problemer som forårsaker denne prisnedgangen, som for eksempel
+          konkurs.
+          <br />
+          forholdet bør sammenlignes med selskaper innenfor samme sektor, fordi
+          sektorer har forskjellige gjennomsnittlige verdier på hva som kan
+          indikere en underpriset / overpriset aksje.
           <br />
         </Card.Text>
         <Divider style={{ marginBottom: "15px" }} />
@@ -502,32 +533,22 @@ function Definitions() {
           avkastning på sysselsatt kapital (roce - return on capital employed)
         </Card.Subtitle>
         <Card.Text style={{ textAlign: "left" }}>
-          fixed asset turnover
+          Utregning:
           <br />
-          inventory turnover
+          resultat før renter og skatter / sysselsatt kapital * 100 (for
+          prosent)
           <br />
-          working capital (kortsiktig eiendeler - kortsiktig gjeld)
+          sysselsatt kapital = totale eiendeler - kortsiktig gjeld
           <br />
-          financial leverage
+          Er en av få ratioer som kombinerer tall fra årsresultat og balanse
+          arket.
           <br />
-          debt/equity
+          Forholdet forteller deg hva slags avkastning du får hvis du legger
+          penger inn i selskapet.
           <br />
-          <br />
-          yield (avkastning)
-          <br />
-          dividend yield%
-          <br />
-          earnings yield % (omvendt p/e tar earnings per share / kurs)
-          <br />
-          gross margin%
-          <br />
-          operating margin %
-          <br />
-          net margin%
-          <br />
-          free float %
-          <br />
-          free float cap
+          Avkastning på sysselsatt kapital tar hensyn til selskapets gjeld og
+          det er det som skiller den fra andre forhold, som for eksempel
+          avkastning fra egenkapital.
           <br />
         </Card.Text>
         <Divider style={{ marginBottom: "15px" }} />

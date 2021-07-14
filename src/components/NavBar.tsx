@@ -3,8 +3,6 @@ import { useHistory } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import InputBase from "@material-ui/core/InputBase";
 import {
   createStyles,
   //alpha,
@@ -23,6 +21,10 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
+      position: "fixed",
+      width: "100%",
+      marginTop: "24px",
+      top: "0",
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -111,9 +113,9 @@ export const NavBar: React.FC = () => {
             <HomeIcon />
           </IconButton>
           <DefinitionsAccordion />
-          <Typography className={classes.title} variant="h6" noWrap>
+          {/* <Typography className={classes.title} variant="h6" noWrap>
             Halla
-          </Typography>
+          </Typography> */}
           <Button
             style={{ color: "white" }}
             onClick={() => history.push("/definitions")}

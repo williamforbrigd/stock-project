@@ -213,11 +213,12 @@ export const DefinitionsAccordion: React.FC = () => {
             kontantstrøm fra finans
             <br />
             p/cf forteller deg forholdet mellom markedsverdien og
-            kontantstrømmen fra driften til et selskap. Jo mindre dette
-            forholdet er, jo bedre antas investeringen som å være. forholdet bør
-            sammenlignes med selskaper innenfor samme sektor, fordi sektorer har
-            forskjellige gjennomsnittlige verdier på hva som kan indikere en
-            underpriset / overpriset aksje.
+            kontantstrømmen fra driften til et selskap.
+            <br />
+            Jo mindre dette forholdet er, jo bedre antas investeringen som å
+            være. forholdet bør sammenlignes med selskaper innenfor samme
+            sektor, fordi sektorer har forskjellige gjennomsnittlige verdier på
+            hva som kan indikere en underpriset / overpriset aksje.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -390,7 +391,7 @@ export const DefinitionsAccordion: React.FC = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Utregning:
+            utregning:
             <br />
             enterprise value / ebit
             <br />
@@ -399,6 +400,16 @@ export const DefinitionsAccordion: React.FC = () => {
             <br />
             ebit (driftsresultat) = årsresultat + renter + skatter
             <br />
+            Den ligner på ev / ebitda men ev / ebit tar hensyn til
+            nedskrivninger og avskrivninger. Dette gjør betydelig forskjell for
+            kapitalintensive selskaper der avskrivninger er en stor økonomisk
+            kostnad.
+            <br />
+            Et lavt ev / ebit forhold kan indikere “en billig” aksje.
+            <br />
+            forholdet bør sammenlignes med selskaper innenfor samme sektor,
+            fordi sektorer har forskjellige gjennomsnittlige verdier på hva som
+            kan indikere en underpriset / overpriset aksje.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -415,7 +426,7 @@ export const DefinitionsAccordion: React.FC = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Utregning:
+            utregning:
             <br />
             enterprise value / ebitda
             <br />
@@ -424,6 +435,336 @@ export const DefinitionsAccordion: React.FC = () => {
             <br />
             ebitda = årsresultat + renter + skatter + nedskrivninger +
             avskrivninger
+            <br />
+            Den ligner på ev / ebit men ev / ebitda utelukker ikke
+            nedskrivninger og avskrivninger.
+            <br />
+            En lav ev / ebitda multippel betyr ofte at aksjen er underpriset,
+            mens en høy ev / ebitda i forhold til sine markeds konkurrenter kan
+            indikere at selskapet er overpriset.
+            <br />
+            Man bør være oppmerksom på hvis man investerer i selskaper der ev /
+            ebitda multippelen synker. Det kan være fundamentale underliggende
+            problemer som forårsaker denne prisnedgangen, som for eksempel
+            konkurs.
+            <br />
+            forholdet bør sammenlignes med selskaper innenfor samme sektor,
+            fordi sektorer har forskjellige gjennomsnittlige verdier på hva som
+            kan indikere en underpriset / overpriset aksje.
+            <br />
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>
+            Resultat per aksje (eps - earnings per share)
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Utregning:
+            <br />
+            årsresultat / utestående aksjer
+            <br />
+            eps forteller deg hvor mye selskapet tjener per aksje
+            <br />
+            Bedrifter er forpliktet til å presentere resultat per aksje i sin
+            årsrapport.
+            <br />
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>
+            salg per aksje (sps - sales per share)
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Utregning:
+            <br />
+            salg / utestående aksjer
+            <br />
+            salg per aksje måler den totale inntekten per aksje over en bestemt
+            periode.
+            <br />
+            Det gir også et raskt blikk på selskapets produktivitet per
+            utestående aksje. Jo høyere salg per aksje jo bedre presterer
+            selskapet.
+            <br />
+            Bedrifter er ikke forpliktet til å presentere salg per aksjer i sin
+            årsrapport.
+            <br />
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>
+            kontantstrøm per aksje (cfps - cash flow per share)
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Utregning:
+            <br />
+            kontantstrøm fra driften / utestående aksjer
+            <br />
+            kontantstrøm = nøyaktig mål på hvor mye kontanter som kom inn og
+            gikk ut av kjernevirksomheten til selskapet.
+            <br />
+            kontantstrøm per aksje representerer kontantene selskapet genererer
+            fra driften per utestående aksje.
+            <br />
+            Mens resultat per aksje kan manipuleres, er det vanskeligere å endre
+            kontantstrøm per aksje, noe som kan gi en mer nøyaktig verdi av
+            styrken og bærekraften til et selskap.
+            <br />
+            Bedrifter er ikke forpliktet til å presentere kontantstrøm per aksje
+            i årsregnskapet.
+            <br />
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>
+            gratis kontantstrøm per aksje (fcfps - free cash flow per share)
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Utregning:
+            <br />
+            gratis kontantstrøm / utestående aksjer
+            <br />
+            kontantstrøm = nøyaktig mål på hvor mye kontanter som kom inn og
+            gikk ut av kjernevirksomheten til selskapet.
+            <br />
+            gratis kontantstrøm = kontantstrøm fra driften - CAPEX
+            (kapitalutgifter eller capital expenditure)
+            <br />
+            CAPEX = penger brukt av et selskap for å vedlikeholde eller
+            oppgradere anleggsmidler (langsiktige eiendeler) som bygninger,
+            maskiner og utstyr. Det er altså pengene som blir brukt for å bli i
+            virksomhet. Du finner CAPEX på kontantstrøm regnskapet innenfor
+            kontantstrøm fra investeringer.
+            <br />
+            gratis kontantstrøm er pengene du hadde fått hvis du hadde eid
+            bedriften selv og per aksje representerer pengene du hadde fått per
+            aksje du eier.
+            <br />
+            gratis kontantstrøm kan brukes til 3 hovedområder:
+            <br />
+            <footer
+              style={{ marginTop: "5px" }}
+              className="blockquote-footer mb-0"
+            >
+              reinvestere og utvide virksomheten raskere
+            </footer>
+            <br />
+            <footer className="blockquote-footer mb-0">betaler utbytter</footer>
+            <br />
+            <footer className="blockquote-footer mb-0">
+              kjøpte tilbake egner aksjer og det egner seg best når aksjen er
+              billigere enn intrinsic value, da får vi mer verdi ut fra
+              selskapet.
+            </footer>
+            <br />
+            Bedrifter er ikke forpliktet til å presentere gratis kontantstrøm
+            per aksjer i sin årsrapport.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>
+            utbytte per aksje (dps - dividend per share)
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Utregning:
+            <br />
+            utbytte utstedt av selskap / utestående aksjer
+            <br />
+            utbytte er viktig fordi beløpet selskapet utbetaler er direkte
+            oversatt som inntekt til aksjonærer.
+            <br />
+            Hvis utbyttet øker over tid, er det et tegn på at inntjeningsveksten
+            kan opprettholdes.
+            <br />
+            Hvis selskapet betaler utbytte er de pliktig til å informere dette i
+            årsrapporten.
+            <br />
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>
+            avkastning på eiendeler (roa - return on assets)
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Utregning:
+            <br />
+            årsresultat / eiendeler * 100
+            <br />
+            avkastning på eiendeler er en indikator som gir investoren en ide om
+            hvor effektivt selskapets ledelse er til å bruke eiendelen til å
+            generere inntjening.
+            <br />
+            roa er uttrykt i prosent.
+            <br />
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>
+            avkastning på egenkapital (roe - return on equity)
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Utregning:
+            <br />
+            årsresultat / egenkapital * 100
+            <br />
+            avkastning på egenkapital er en indikator som gir investoren en ide
+            om hvor effektivt selskapets ledelse er til å bruke egenkapital til
+            å generere inntjening.
+            <br />
+            roe er uttrykt i prosent.
+            <br />
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>
+            avkastning på investert kapital (roik - return on invested capital)
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Utregning:
+            <br />
+            nopat / eiendeler
+            <br />
+            nopat = cash flow fra driften - skatt
+            <br />
+            investert kapital = egenkapital + gjeld - “non operating assets”
+            <br />
+            non operating assets = cash og omsettelige verdipapirer. Cash er
+            “non operating assets” fordi det er definert som kapital som bare
+            ligger der til uventede regninger.
+            <br />
+            roic forteller hvor effektiv ledelsen er til å reinvestere
+            fortjenesten i virksomheten, uttrykt i prosent.
+            <br />
+            En roic som trender nedover over fremtiden kan indikere at selskapet
+            går tom for investeringsmuligheter.
+            <br />
+            Dette kan skje med hvilken som helst bedrift i fremtiden, fordi det
+            kan komme en tid der selskapene ikke lenger finner like gunstige
+            investeringsmuligheter som tidligere.
+            <br />
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>
+            avkastning på investering (roi - return on investment)
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Utregning:
+            <br />
+            årsresultat / investeringskostnad * 100 (for prosent)
+            <br />
+            avkastning på investering forteller deg hvor mye du tjener på en
+            investering, uttrykt i prosent.
+            <br />
+            roi kan brukes til å sammenligne og rangere investeringer i
+            forskjellige eiendeler.
+            <br />
+            roi tar ikke hensyn til tidsforløpet, og man kan derfor gå glipp av
+            en annen god investering.
+            <br />
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>
+            avkastning på sysselsatt kapital (roce - return on capital employed)
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Utregning:
+            <br />
+            resultat før renter og skatter / sysselsatt kapital * 100 (for
+            prosent)
+            <br />
+            sysselsatt kapital = totale eiendeler - kortsiktig gjeld
+            <br />
+            Er en av få ratioer som kombinerer tall fra årsresultat og balanse
+            arket.
+            <br />
+            Forholdet forteller deg hva slags avkastning du får hvis du legger
+            penger inn i selskapet.
+            <br />
+            Avkastning på sysselsatt kapital tar hensyn til selskapets gjeld og
+            det er det som skiller den fra andre forhold, som for eksempel
+            avkastning fra egenkapital.
             <br />
           </Typography>
         </AccordionDetails>
