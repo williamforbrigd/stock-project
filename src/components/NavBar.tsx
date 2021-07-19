@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -14,8 +14,9 @@ import SearchIcon from "@material-ui/icons/Search";
 import { Button, TextField } from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/Home";
 import { DefinitionsAccordion } from "./DefinitionsAccordion";
-import SpreadSheet from "./SpreadSheet";
+import SpreadSheet from "../containers/SpreadSheet";
 import "./NavBar.css";
+import { Context } from "../Context";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -83,6 +84,7 @@ const useStyles = makeStyles((theme: Theme) =>
 export const NavBar: React.FC = () => {
   const classes = useStyles();
   const history = useHistory();
+  const { stock, setStock } = useContext(Context.StockContext);
 
   const [currentStockSymbol, setCurrentStockSymbol] = useState<string>("");
   const [symbol, setSymbol] = useState<string>("");
@@ -141,14 +143,14 @@ export const NavBar: React.FC = () => {
                 variant="contained"
                 color="primary"
                 onClick={() => {
-                  setSymbol(currentStockSymbol);
+                  setStock(currentStockSymbol);
+                  history.push("/spreadsheet");
                 }}
                 className="navbar__searchButton"
               >
                 Search
               </Button>
             </div>
-            {symbol !== "" && <SpreadSheet symbol={symbol} />}
             {/* <div className={classes.searchIcon}>
               <SearchIcon />
             </div> */}

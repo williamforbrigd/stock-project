@@ -1,6 +1,6 @@
 import { Button, TextField } from "@material-ui/core";
 import React, { ChangeEvent, useState } from "react";
-import SpreadSheet from "../components/SpreadSheet";
+import SpreadSheet from "./SpreadSheet";
 import "./MainPage.css";
 
 function MainPage() {

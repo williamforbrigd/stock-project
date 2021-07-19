@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import axios from "../axios";
-import { BalanceSheetStatement } from "./BalanceSheetStatement";
-import { TotalCash } from "./TotalCash";
-import { CashFlowStatement } from "./CashFlowStatement";
+import { BalanceSheetStatement } from "../components/BalanceSheetStatement";
+import { TotalCash } from "../components/TotalCash";
+import { CashFlowStatement } from "../components/CashFlowStatement";
+import { Context } from "../Context";
 
 const useStyles = makeStyles({
   table: {
@@ -29,12 +30,9 @@ const useStyles = makeStyles({
   },
 });
 
-interface SpreadSheetProps {
-  symbol: string;
-}
-
-export default function BasicTable({ symbol }: SpreadSheetProps) {
+export default function BasicTable() {
   const classes = useStyles();
+  const { stock, setStock } = useContext(Context.StockContext);
   const [symbolString, setSymbolString] = useState<string>("");
   const [balanceSheetStatements, setBalanceSheetStatements] = useState<any[]>(
     []
@@ -44,7 +42,7 @@ export default function BasicTable({ symbol }: SpreadSheetProps) {
   const fetchData = async () => {
     const request = await axios.get("stock/v2/get-cash-flow", {
       params: {
-        symbol: symbol,
+        symbol: stock,
       },
       headers: {
         "x-rapidapi-key": "362a045420msh6a56907d12b3a99p189eccjsn301273e64d30",
@@ -63,7 +61,7 @@ export default function BasicTable({ symbol }: SpreadSheetProps) {
   };
   useEffect(() => {
     fetchData();
-  }, [symbol]);
+  }, [stock]);
 
   const renderCashFlowStatements = cashFlowStatements.map(
     (c: any, key: number) => {
@@ -90,7 +88,7 @@ export default function BasicTable({ symbol }: SpreadSheetProps) {
   );
 
   return (
-    <div>
+    <div style={{ marginTop: "100px" }}>
       <TotalCash
         balanceSheetStatements={balanceSheetStatements}
         symbolString={symbolString}

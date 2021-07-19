@@ -33,8 +33,8 @@ const useStyles = makeStyles({
 });
 
 interface CashFlowStatementProps {
-  cashFlowStatement: any;
-  symbolString: string;
+  cashFlowStatement?: any;
+  symbolString?: string;
 }
 
 export const CashFlowStatement: React.FC<CashFlowStatementProps> = ({
