@@ -4,7 +4,6 @@ import axios from "../axios";
 import { BalanceSheetStatement } from "./BalanceSheetStatement";
 import { TotalCash } from "./TotalCash";
 import { CashFlowStatement } from "./CashFlowStatement";
-import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles({
   table: {
