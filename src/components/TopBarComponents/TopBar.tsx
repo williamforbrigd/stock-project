@@ -21,28 +21,28 @@ export const TopBar: React.FC = () => {
     } else return 0;
   };
 
-  // const fetchDataSp500 = async () => {
-  //   const request = await axios.get("market/v2/get-summary", {
-  //     params: { region: "US" },
-  //     headers: {
-  //       "x-rapidapi-key": "362a045420msh6a56907d12b3a99p189eccjsn301273e64d30",
-  //       "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-  //     },
-  //   });
-  //   console.log(request.data);
-  //   setSp500(request.data.marketSummaryAndSparkResponse.result[0].shortName);
-  //   setSp500Current(
-  //     request.data.marketSummaryAndSparkResponse.result[0].spark.close[
-  //       request.data.marketSummaryAndSparkResponse.result[0].spark.close
-  //         .length - 1
-  //     ]
-  //   );
-  //   setSp500PrevClose(
-  //     request.data.marketSummaryAndSparkResponse.result[0].spark.previousClose
-  //   );
-  //   setSp500Percentage(calcPercentage(sp500Current, sp500PrevClose));
-  //   return request;
-  // };
+  const fetchDataSp500 = async () => {
+    const request = await axios.get("market/v2/get-summary", {
+      params: { region: "US" },
+      headers: {
+        "x-rapidapi-key": "362a045420msh6a56907d12b3a99p189eccjsn301273e64d30",
+        "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
+      },
+    });
+    console.log(request.data);
+    setSp500(request.data.marketSummaryAndSparkResponse.result[0].shortName);
+    setSp500Current(
+      request.data.marketSummaryAndSparkResponse.result[0].spark.close[
+        request.data.marketSummaryAndSparkResponse.result[0].spark.close
+          .length - 1
+      ]
+    );
+    setSp500PrevClose(
+      request.data.marketSummaryAndSparkResponse.result[0].spark.previousClose
+    );
+    setSp500Percentage(calcPercentage(sp500Current, sp500PrevClose));
+    return request;
+  };
 
   const fetchDataOsebx = async () => {
     const request = await axios.get("stock/v2/get-summary", {
@@ -63,11 +63,11 @@ export const TopBar: React.FC = () => {
   };
 
   useEffect(() => {
-    //fetchDataSp500();
-    fetchDataOsebx();
-    const req = Requests.fetchDataSp500();
+    // fetchDataSp500();
+    // fetchDataOsebx();
+    // Requests.fetchDataSp500();
     //console.log(req["[[PromiseResult]]"]);
-    console.log(req);
+    // console.log(req);
     // setSp500(request.data.marketSummaryAndSparkResponse.result[0].shortName);
     // setSp500Current(
     //   request.data.marketSummaryAndSparkResponse.result[0].spark.close[
